@@ -1,0 +1,21 @@
+
+<a href="http://localhost:3000/books/{{id}}/" >
+<h1> <small>Title: {{title}}</small></h1></a>
+<h4>Author: {{author}}</h4>
+<div><br>
+  {{#if desc}}
+    {{desc}}
+  {{else}}
+    Descriptions are for the weak.
+  {{/if}}
+  <br><br>
+  {{#if user}}
+    <b>{{first}}
+    {{last}}:</b>
+    {{user.note}}
+  {{else}}
+    Nobody liked this book, so there are no reviews.
+  {{/if}}
+  <button class="delete-button" data-id="{{id}}">delete</button>
+  <button class="like-button" data-id="{{id}}">like</button>
+</div>
